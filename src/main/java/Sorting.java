@@ -32,7 +32,21 @@ public class Sorting {
      */
     @SuppressWarnings("unused")
     private static int[] bubbleSort(final int[] array) {
-        return null;
+        boolean recurs = false;
+        if (array.length == 1 || array.length == 0) {
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] < array[i - 1]) {
+                    int temp = array[i];
+                    array[i] = array[i - 1];
+                    array[i - 1] = temp;
+                    recurs = true;
+                }
+            }
+            if (recurs) {
+                return bubbleSort(array);
+            } else {
+            return null;
+            }
     }
 
     /**
@@ -43,6 +57,34 @@ public class Sorting {
      */
     @SuppressWarnings("unused")
     private static int[] selectionSort(final int[] array) {
+        int low = 0;
+        int high = array.length - 1;
+        int currentMin = array[0];
+        for (int i = 0; i < high - 1; i++) {
+            for (int j = i + 1; j < array.length - 1; j++) {
+                if (array[j] < currentMin) {
+                    currentMin = array[j];
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @param array 1234
+     * @param first 1234
+     * @param second 1234
+     * @return
+     */
+    public int[] swap(final int[] array, final int first, final int second) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; i++) {
+                if (array[i] == array[j]) {
+
+                }
+            }
+        }
         return null;
     }
 
